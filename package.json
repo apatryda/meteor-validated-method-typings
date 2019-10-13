@@ -1,0 +1,31 @@
+{
+  "name": "meteor-validated-method-typings",
+  "version": "1.2.0",
+  "description": "Typings for Meteor's mdg:validated-method package",
+  "types": "index.d.ts",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/apatryda/meteor-validated-method-typings.git"
+  },
+  "keywords": [
+    "meteor",
+    "validated",
+    "method",
+    "typings"
+  ],
+  "author": "Artur Nerkowski",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/apatryda/meteor-validated-method-typings/issues"
+  },
+  "homepage": "https://github.com/apatryda/meteor-validated-method-typings#readme",
+  "devDependencies": {
+    "@types/meteor": "^1.4.33"
+  },
+  "peerDependencies": {
+    "@types/meteor": "^1.4.33"
+  }
+}

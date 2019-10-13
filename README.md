@@ -1,2 +1,2 @@
 # meteor-validated-method-typings
-Typings for Meteor's validated-method package
+Typings for Meteor's mdg:validated-method package
