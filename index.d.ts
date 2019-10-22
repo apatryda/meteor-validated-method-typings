@@ -1,7 +1,7 @@
 import { EJSONable, EJSONableProperty } from 'meteor/ejson';
 import { Meteor } from 'meteor/meteor';
 
-export type ValidatedMethodArgs = Readonly<EJSONable | EJSONableProperty>;
+export type ValidatedMethodArgs = EJSONable | EJSONableProperty;
 export type ValidatedMethodResult = EJSONable | EJSONable[] | EJSONableProperty | EJSONableProperty[] | void;
 export type ValidatedMethodCallback<Result extends ValidatedMethodResult = void> = (error: Error | Meteor.Error | undefined, result?: Result) => void;
 export interface ValidatedMethodApplyOptions<Result extends ValidatedMethodResult = never> {

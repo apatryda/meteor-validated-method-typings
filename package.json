@@ -1,6 +1,6 @@
 {
   "name": "meteor-validated-method-typings",
-  "version": "1.2.0",
+  "version": "1.2.1",
   "description": "Typings for Meteor's mdg:validated-method package",
   "types": "index.d.ts",
   "scripts": {
