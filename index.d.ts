@@ -11,26 +11,26 @@ export interface ValidatedMethodApplyOptions<Result extends ValidatedMethodResul
   wait?: boolean;
 }
 export type ValidatedMethodMixin<
+  Args extends ValidatedMethodArgs = undefined,
   Result extends ValidatedMethodResult = void,
-  Args extends ValidatedMethodArgs = undefined
-> = (methodOptions: ValidatedMethodOptions<Result, Args>) => ValidatedMethodOptions<Result, Args>;
+> = (methodOptions: ValidatedMethodOptions<Args, Result>) => ValidatedMethodOptions<Args, Result>;
 
 export interface ValidatedMethodOptions<
+  Args extends ValidatedMethodArgs = undefined,
   Result extends ValidatedMethodResult = void,
-  Args extends ValidatedMethodArgs = undefined
 > {
   name: string;
   run(this: Meteor.MethodThisType, args?: Args): PromiseLike<Result> | Result;
   validate: ((args: Args) => void) | null;
   applyOptions?: ValidatedMethodApplyOptions<Result>;
-  mixins?: ValidatedMethodMixin<Result, Args>[];
+  mixins?: ValidatedMethodMixin<Args, Result>[];
 }
 
 export class ValidatedMethod<
+  Args extends ValidatedMethodArgs = undefined,
   Result extends ValidatedMethodResult = void,
-  Args extends ValidatedMethodArgs = undefined
 > {
-  constructor(options: ValidatedMethodOptions<Result, Args>);
+  constructor(options: ValidatedMethodOptions<Args, Result>);
   _execute(context: Partial<Meteor.MethodThisType>, args?: Args): void;
   call(args: Args, callback: ValidatedMethodCallback<Result>): void;
   call(argsOrCallback?: Args | ValidatedMethodCallback<Result>): void;
