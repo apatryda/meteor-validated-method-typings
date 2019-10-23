@@ -32,6 +32,6 @@ export class ValidatedMethod<
 > {
   constructor(options: ValidatedMethodOptions<Args, Result>);
   _execute(context: Partial<Meteor.MethodThisType>, args?: Args): void;
-  call(args: Args, callback: ValidatedMethodCallback<Result>): void;
-  call(argsOrCallback?: Args | ValidatedMethodCallback<Result>): void;
+  call(args: Args, callback: ValidatedMethodCallback<Result>): Result;
+  call(argsOrCallback?: Args | ValidatedMethodCallback<Result>): Result;
 }
